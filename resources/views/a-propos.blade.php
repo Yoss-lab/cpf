@@ -20,25 +20,30 @@
 
     <section class="inner-page">
       <div class="container">
-      <!-- à propos notre centre CPF -->
-      @include('includes.a-proposCPF')
-
-      <!-- about centre CPF -->
-      @include('includes.about')
-      <!-- Statistique CPF -->
-      @include('includes.static')
-
-
-      <!-- Client CPF -->
-      @include('includes.client')
-
-
-
-      <!-- Gallerie CPF -->
-      @include('includes.gallerie')
+      
 
     </div>
     </section>
+
+    <!-- à propos notre centre CPF -->
+    @include('includes.a-proposCPF')
+
+<!-- Mot directeur -->
+@include('includes.motDirecteur')
+
+<!-- about centre CPF -->
+@include('includes.about')
+<!-- Statistique CPF -->
+@include('includes.static')
+
+
+<!-- Client CPF -->
+@include('includes.client')
+
+
+
+<!-- Gallerie CPF -->
+@include('includes.gallerie')
 
   </main><!-- End #main -->
    

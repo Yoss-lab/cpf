@@ -20,7 +20,7 @@
     <div class="row">
 
       <div class="col-lg-3 col-md-6 footer-contact">
-        <h3>BizLand<span>.</span></h3>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
         <p>
         CPF l'Excellence,   <br>
         30 Rue Mustapha Kraif<br>
@@ -33,16 +33,16 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Useful Links</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Acceuil</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">A propos</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Formations</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">E-learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Our Services</h4>
+        <h4>Nos Formations</h4>
         <ul>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>

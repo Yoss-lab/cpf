@@ -26,3 +26,7 @@ Route::get('/welcome', function () {
 Route::get('/a-propos',function(){
     return view('a-propos');
 });
+
+Route::get('/BTS',function(){
+    return view('BTS');
+});
