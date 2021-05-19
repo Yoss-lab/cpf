@@ -30,3 +30,10 @@ Route::get('/a-propos',function(){
 Route::get('/BTS',function(){
     return view('BTS');
 });
+Route::get('/ajoutFormation','CRUDController@create');
+Route::post('/ajoutFormation','CRUDController@store');
+
+Route::post('store', 'CrudController@store')->name('offers.store');
+
+Route::get('test','crud@getfn');
+Route::get('store','crud@store');
