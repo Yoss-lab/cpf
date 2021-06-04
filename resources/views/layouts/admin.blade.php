@@ -1,58 +1,66 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html class="no-js" lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ThemeKit - Admin Template</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="asset/favicon.ico" type="image/x-icon" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>BizLand Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-  <!-- =======================================================
-  * Template Name: BizLand - v3.1.0
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+        
+        <link rel="stylesheet" href="asset/plugins/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="asset/plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="asset/plugins/icon-kit/dist/css/iconkit.min.css">
+        <link rel="stylesheet" href="asset/plugins/ionicons/dist/css/ionicons.min.css">
+        <link rel="stylesheet" href="asset/plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+        <link rel="stylesheet" href="asset/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="asset/plugins/jvectormap/jquery-jvectormap.css">
+        <link rel="stylesheet" href="asset/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+        <link rel="stylesheet" href="asset/plugins/weather-icons/css/weather-icons.min.css">
+        <link rel="stylesheet" href="asset/plugins/c3/c3.min.css">
+        <link rel="stylesheet" href="asset/plugins/owl.carousel/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="asset/plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="asset/dist/css/theme.min.css">
+        <script src="asset/src/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
 
 <body>
 
-  
-
-    <!-- info & register bar -->
+    <div class="wrapper">
+        <!-- header -->
+        @include('includesAdmin.header')
     
 
-    <!-- header -->
+        <div class="page-wrap">
+
+            @include('includesAdmin.sidebar')
+
+
+            <div class="main-content">
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
+            </div>
+            
+
+
+            </div>
+
+            
+            @include('includesAdmin.chat-panel')
+           
+    
+        </div>
+    </div>  
      
-    <main id="main">
-        
-      @yield('content')
 
-    </main><!-- End #main --> 
+     
 
-    <!-- footer -->
+    
     
         
     
@@ -60,21 +68,40 @@
   <!-- .site-wrap -->
 
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="asset/plugins/popper.js/dist/umd/popper.min.js"></script>
+        <script src="asset/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="asset/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+        <script src="asset/plugins/screenfull/dist/screenfull.js"></script>
+        <script src="asset/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="asset/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="asset/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="asset/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <script src="asset/plugins/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="asset/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="asset/plugins/moment/moment.js"></script>
+        <script src="asset/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="asset/plugins/d3/dist/d3.min.js"></script>
+        <script src="asset/plugins/c3/c3.min.js"></script>
+        <script src="asset/js/tables.js"></script>
+        <script src="asset/js/widgets.js"></script>
+        <script src="asset/js/charts.js"></script>
+        <script src="asset/dist/js/theme.min.js"></script>
+        <script src="asset/js/form-components.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
 
 
 </body>

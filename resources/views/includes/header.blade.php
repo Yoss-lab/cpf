@@ -17,20 +17,26 @@
               
               <li class="dropdown"><a href="#"><span>BTS</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{{ url('/BTS') }}">Animation jardin d'enfant</a></li>
-                  <li><a href="#">Assistant(e) de direction</a></li>
-                  <li><a href="#">Comtable d'entreprise</a></li>
-                  <li><a href="#">Educateur de la prime et de la petite enfance</a></li>
+                @foreach($data as $formation)
+                 
+                 @if ($formation -> type == 1) 
+              
+                 <li><a href="">{{$formation -> nomFormation}}</a></li>
+                 @endif
+                 @endforeach
                   
                 </ul>
               </li>
 
               <li class="dropdown"><a href="#"><span>BTP</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Animation jardin d'enfant</a></li>
-                  <li><a href="#">Assistant(e) de direction</a></li>
-                  <li><a href="#">Comtable d'entreprise</a></li>
-                  <li><a href="#">Educateur de la prime et de la petite enfance</a></li>
+                @foreach($data as $formation)
+                 
+                 @if ($formation -> type == 2) 
+              
+                 <li><a href="">{{$formation -> nomFormation}}</a></li>
+                 @endif
+                 @endforeach
                   
                 </ul>
               </li>
@@ -40,8 +46,22 @@
 
           <li class="dropdown"><a href="#"><span>Formations Continu</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
+            <li class="dropdown"><a href="#"><span>Accélérée</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                
+                
+                @foreach($data as $formation)
+                 
+                  @if ($formation -> type == 3) 
+               
+                  <li><a href="">{{$formation -> nomFormation}}</a></li>
+                  @endif
+                  @endforeach
+                  
+                </ul>
+              </li>
               <li><a href="#">Diplomante</a></li>
-              <li><a href="#">Accélérée</a></li>
+             
               
             </ul>
           </li>

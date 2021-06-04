@@ -25,7 +25,7 @@ class CRUDcontroller extends Controller
      */
     public function create()
     {
-        return view('formation.createFormation');
+        return view('viewAdmin.createFormation');
     }
 
     /**
@@ -52,31 +52,7 @@ class CRUDcontroller extends Controller
         /* return redirect()->back()->with(['success' => 'تم اضافه العرض بنجاح ']); */
     }
 
-    public function getAllFormations()
-    {
-       /* $offers = Offer::select('id',
-            'price',
-            'photo',
-            'name_' . LaravelLocalization::getCurrentLocale() . ' as name',
-            'details_' . LaravelLocalization::getCurrentLocale() . ' as details'
-        )->get(); // return collection of all result*/
-
-
-       ##################### paginate result ####################
-         $offers = Offer::select('id',
-            'image',
-            'nomFormation',
-            'type' . LaravelLocalization::getCurrentLocale() . ' as type',
-            'descFormation' . LaravelLocalization::getCurrentLocale() . ' as formation'
-        )/* ->paginate(PAGINATION_COUNT) */;
-
-
-
-        //return view('offers.all', compact('offers'));
-
-
-        return view('offers.paginations',compact('offers'));
-    }
+    
 
     /**
      * Display the specified resource.
@@ -86,7 +62,9 @@ class CRUDcontroller extends Controller
      */
     public function show($id)
     {
-        //
+        return view('detailsFormation', [
+            'formation' => Formation::findOrFail($id)
+        ]);
     }
 
     /**
@@ -97,7 +75,24 @@ class CRUDcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+
+        
+
+        //check if formation id exists
+        $formations = Formation::find($id);  // search in given table id only
+        if (!$formations)
+            return response()->json([
+                'status' => false,
+                'msg' => ' not exist',
+            ]);
+
+        $formations = Formation::select('id', 'nomFormation', 'type', 'prix', 'descFormation', 'image')->find($id);
+
+        return view('viewAdmin.editFormation', compact('formations'));
+
+      
+      
+        
     }
 
     /**
@@ -109,7 +104,15 @@ class CRUDcontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       //check if formation id exists
+       
+
+       $formation = Formation::select('id','image','nomFormation','type','descFormation')->find($id);
+       if(!$formation) return "formation not exist!";
+
+      $formation-> update($request->all());
+      return "modifie avec succée";
+
     }
 
     /**
@@ -120,6 +123,12 @@ class CRUDcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        //check if formation id exists
+        $formation = Formation::find($id);
+
+        if(!$formation) return "formation not exist!";
+
+        $formation -> delete();
+         return redirect()->back();
     }
 }
