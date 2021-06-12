@@ -40,6 +40,7 @@ class CrudCover extends Controller
 
         //insert
         Cover::create([
+            'text'=> $request->text,
             'image' => $image
             
             

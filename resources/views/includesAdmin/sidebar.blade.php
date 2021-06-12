@@ -3,12 +3,12 @@
                     <div class="sidebar-header">
                         <a class="header-brand" href="index.html">
                             <div class="logo-img">
-                               <img src="asset/src/img/brand-white.svg" class="header-brand-img" alt="lavalite"> 
+                              <!--  <img src="asset\img\cpf.png" class="header-brand-img" alt="cpf">  -->
                             </div>
-                            <span class="text">ThemeKit</span>
+                            <span class="text">CPF L'Excellence</span>
                         </a>
-                        <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
-                        <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+                       <!--  <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
+                        <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button> -->
                     </div>
                     <div class="sidebar-content">
                         <div class="nav-container">

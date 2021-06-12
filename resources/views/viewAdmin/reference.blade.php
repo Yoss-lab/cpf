@@ -29,8 +29,8 @@
                             </div>
                         </div>
 
-                        <button type="button" class="btn btn-secondary" href="{{url('/addAct')}}"><i class="ik ik-clipboard"></i>Ajouter actualité</button>
-                        <input type="" class="btn btn-secondary ik ik-clipboard" href="{{url('/addAct')}}">
+                        <a type="button" class="btn btn-secondary" href="{{url('/addReference')}}"><i class="ik ik-clipboard"></i>Ajouter référence</a>
+
      <!-- @include('includesAdmin.add')  -->
      <div class="col-xl-8 col-md-6">
                                 <div class="card table-card">

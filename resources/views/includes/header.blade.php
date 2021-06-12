@@ -21,7 +21,7 @@
                  
                  @if ($formation -> type == 1) 
               
-                 <li><a href="">{{$formation -> nomFormation}}</a></li>
+                 <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
                  @endif
                  @endforeach
                   
@@ -34,7 +34,7 @@
                  
                  @if ($formation -> type == 2) 
               
-                 <li><a href="">{{$formation -> nomFormation}}</a></li>
+                 <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
                  @endif
                  @endforeach
                   
@@ -54,7 +54,7 @@
                  
                   @if ($formation -> type == 3) 
                
-                  <li><a href="">{{$formation -> nomFormation}}</a></li>
+                  <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
                   @endif
                   @endforeach
                   
@@ -69,7 +69,28 @@
           <li><a class="nav-link scrollto" href="{{ url('/contact') }}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
 
+
+        
+                
+
+            
+            
+
+      </nav><!-- .navbar -->
+    
     </div>
+
+
+
+
+
+
+    
+                                
+                            @include('includes.auth')
+                                
+
+                                
+                            
   </header><!-- End Header -->

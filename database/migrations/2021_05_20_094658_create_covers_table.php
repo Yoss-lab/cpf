@@ -15,6 +15,8 @@ class CreateCoversTable extends Migration
     {
         Schema::create('covers', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('text');
             $table->timestamps();
         });
     }

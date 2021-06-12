@@ -11,6 +11,11 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="exampleInputName1">Prix</label>
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Prix" name="prix">
+                    </div>
+
+                    <div class="form-group">
                            <label >Type</label>
                           <select id="inputType" class="form-control" name="type">
                             <option value="" selected>Choisir...</option>

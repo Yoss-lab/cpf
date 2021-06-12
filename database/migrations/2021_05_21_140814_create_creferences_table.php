@@ -15,6 +15,8 @@ class CreateCreferencesTable extends Migration
     {
         Schema::create('creferences', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -15,7 +15,15 @@ class CRUDcontroller extends Controller
      */
     public function index()
     {
-        //
+        $formations = Formation::select(
+            'image',
+            'nomFormation',
+            'type',
+            'descFormation'
+        )->get();
+
+        return 
+               view('acceuil',compact('formations') );
     }
 
     /**
@@ -44,6 +52,7 @@ class CRUDcontroller extends Controller
             'image' => $image,
             'nomFormation' => $request->nomFormation,
             'type' =>   $request->type, 
+            'prix' =>   $request->prix, 
             'descFormation' =>  $request->descFormation,
             
         ]);
@@ -60,11 +69,14 @@ class CRUDcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Formation $formation)
     {
-        return view('detailsFormation', [
+        return view('detailsFormation',compact('formation'));
+
+
+       /*  return view('detailsFormation', [
             'formation' => Formation::findOrFail($id)
-        ]);
+        ]); */
     }
 
     /**

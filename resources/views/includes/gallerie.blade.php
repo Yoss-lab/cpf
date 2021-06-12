@@ -29,7 +29,7 @@
             <div class="portfolio-info">
               <h4>{{$gal -> titre}}</h4>
               <p>{{$gal -> sousTitre}}</p>
-              <a href="assets/img/portfolio/android.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{{asset('assets/img/gallerie/'.$gal->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$gal -> titre}}"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>

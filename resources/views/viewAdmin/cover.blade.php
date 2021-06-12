@@ -28,9 +28,8 @@
                                 </div>
                             </div>
                         </div>
+                        <a type="button" class="btn btn-secondary" href="{{url('/cover')}}"><i class="ik ik-clipboard"></i>Ajouter photo couverture</a>
 
-                        <button type="button" class="btn btn-secondary" href="{{url('/addAct')}}"><i class="ik ik-clipboard"></i>Ajouter couverture</button>
-                        <input type="" class="btn btn-secondary ik ik-clipboard" href="{{url('/addAct')}}">
      <!-- @include('includesAdmin.add')  -->
      <div class="col-xl-8 col-md-6">
                                 <div class="card table-card">

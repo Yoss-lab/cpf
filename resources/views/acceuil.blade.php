@@ -1,4 +1,4 @@
-  @extends('layouts.app')
+  @extends('layouts.apps')
   @section('content')
    <!-- cover images -->
    @include('includes.cover') 
