@@ -13,9 +13,9 @@
                     <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
-                                <div class="nav-lavel">Navigation</div>
+                                <div class="nav-lavel">CPF</div>
                                 <div class="nav-item active">
-                                    <a href="index.html"><i class="ik ik-bar-chart-2"></i><span>Acceuil</span></a>
+                                    <a href="#"><i class="ik ik-bar-chart-2"></i><span>Acceuil</span></a>
                                 </div>
 
                                 <div class="nav-item active">
@@ -58,7 +58,16 @@
                                         <a href="pages/widget-chart.html" class="menu-item">Chart Widget</a>
                                     </div>
                                 </div>
-                               
+
+                                <div class="nav-lavel">Navigation</div>
+                                <div class="nav-item active">
+                                    <a href="{{url('/inscriptions')}}"><i class="ik ik-bar-chart-2"></i><span>Inscription</span><span class="badge badge-danger">+1</span></a>
+                                </div> 
+                                <div class="nav-item active">
+                                    <a href="{{url('/messages')}}"><i class="ik ik-bar-chart-2"></i><span>Message</span></a>
+                                </div> 
+
+
                                 <div class="nav-lavel">Support</div>
                                 <div class="nav-item">
                                     <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Documentation</span></a>

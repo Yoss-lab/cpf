@@ -4,7 +4,7 @@
 
         <div class="section-title">
           <!-- <h2>F.A.Q</h2> -->
-          <h3>Module Enseignés En BTS <span>Animation jardin d'enfant</span></h3>
+          <h3>Module Enseignés En BTS <span>{{$formation -> nomFormation}}</span></h3>
 <!--           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
  -->        </div>
 

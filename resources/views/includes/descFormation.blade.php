@@ -5,7 +5,7 @@
         <div class="section-title">
           <!-- <h2>About</h2> -->
 
-          <h3>Description De BTS  <span>{{$formation -> nomFormation}}</span></h3>
+          <h3>Description De formation   <span>{{$formation -> nomFormation}}</span></h3>
 <!--           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
  -->        </div>
 
@@ -26,12 +26,12 @@
                 <i class="bx bx-store-alt"></i>
                 <div>
                   <!-- <h5>Animateur de jardin d’enfantst</h5> -->
-                  <p>Animateur de jardin d’enfants</p>
+                  <p>*********************************************</p>
                 </div>
               </li>
               <li>
                 <i class="bx bx-images"></i>
-                <p>Assistant préscolaire</p>
+                <p>**********************************************</p>
                 <div>
                   <!-- <h5>Magnam soluta odio exercitationem reprehenderi</h5> -->
                   

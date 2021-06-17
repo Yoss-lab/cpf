@@ -10,10 +10,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-           <h2>BTS Animation jardin d'enfant</h2>          
+        <h2><a href="{{url('/inscription')}}" type="submit">Inscrivez-vous </a></h2>        
          <ol>
             <li><a href="{{ url('/') }}">Acceuil</a></li>
-            <li>BTS Animation jardin d'enfant</li>
+            <li>{{$formation -> nomFormation}}</li>
           </ol>
         </div>
 

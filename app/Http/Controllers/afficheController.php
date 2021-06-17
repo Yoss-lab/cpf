@@ -7,6 +7,8 @@ use App\Formation;
 use App\Creference;
 use App\Actualite;
 use App\Gallerie;
+use App\Inscription;
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Resources\Views\acceuil;
@@ -102,7 +104,30 @@ class afficheController extends Controller
                        view('viewAdmin.actualite',compact('actualites') );
                        
                 
-                }
+             }
+
+             public function getAdminInscri()
+             {
+                
+               
+                 ##################### paginate result ####################
+                 
+                 $inscris = Inscription::select(
+                     'id',
+                     'nom',
+                     'prenom',
+                     'cin',
+                     'tel',
+                     'email',
+                     'formation',
+                     'created_at'
+                 )->get();
+         
+                 return 
+                        view('viewAdmin.inscription',compact('inscris') );
+                        
+                 
+              }
 
                 public function getAdminRef()
             {
@@ -156,6 +181,23 @@ class afficheController extends Controller
                                
                         
                         }
+
+                        public function getAdminMessages()
+                        {
+                           
+                          
+                            ##################### paginate result ####################
+                            
+                            $message = Contact::select(
+                                'id','nom','email','objet','message','created_at'
+                                
+                            )->get();
+                    
+                            return 
+                                   view('viewAdmin.message',compact('message') );
+                                   
+                            
+                            }      
            
    
 }

@@ -69,16 +69,17 @@
   </div>
 </div>
 
-<div class="container py-4">
+
+<div class="container py-4" style="color:white" >
   <div class="copyright">
     &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
   </div>
-  <div class="credits">
+  <div class="credits" style="color:white">
     <!-- All the links in the footer should remain intact. -->
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    Designed by <a href="https://bootstrapmade.com/" style="color:white">BootstrapMade</a>
   </div>
 </div>
 </footer><!-- End Footer -->

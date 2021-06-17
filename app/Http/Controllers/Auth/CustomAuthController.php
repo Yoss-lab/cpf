@@ -21,7 +21,7 @@ class CustomAuthController extends Controller
 
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
 
-            return redirect()->intended('/admin');
+            return redirect()->intended('/addAct');
         }
         return back()->withInput($request->only('email'));
     }

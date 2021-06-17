@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/dash', function () {
     return view('viewAdmin.dashboard');
-})->middleware('auth');
+});
 
 Route::get('/', function () {
     return view('acceuil');
@@ -53,13 +53,21 @@ Route::get('/a-propos','afficheController@getAllFormations' );
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/contactez-nous','ContactController@create');
     Route::post('/contactez-nous','ContactController@store');
+
+    Route::get('/inscription',function(){
+        return view('formations.inscription');
+    });
+    Route::post('/inscri','InscriptionController@store');
 });
 
 Route::get('showFormation/{formation}','CRUDController@show');
 
-Route::get('/BTS',function(){
-    return view('BTS');
+Route::get('/formation',function(){
+    return view('formations.bureautique');
 });
+
+
+
 
 
 //admin
@@ -71,6 +79,8 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/references','afficheController@getAdminRef');
         Route::get('/couvertures','afficheController@getAdminCover');
         Route::get('/gallerie','afficheController@getAdminGallerie');
+        Route::get('/inscriptions','afficheController@getAdminInscri');
+        Route::get('/messages', 'afficheController@getAdminMessages');
 
         Route::get('/formations', function () {return view('viewAdmin.formations');});
         Route::get('/editFormation/{id}', function () {return view('viewAdmin.editFormation');});
@@ -99,6 +109,8 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/addGallerie','CrudGallerie@create');
         Route::post('/addGallerie','CrudGallerie@store');
         Route::get('/deleteGallerie/{id}','CrudGallerie@destroy');
+
+        
 
     });
 
