@@ -10,7 +10,7 @@
           <div class="card-header"><h3>Modifie Actualité</h3></div>
               <div class="card-body">
 
-              Form
+              
                  <form class="forms-sample"  method="PUT" action="" enctype="multipart/form-data">
                    @csrf
                     <div class="form-group">

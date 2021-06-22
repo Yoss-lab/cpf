@@ -9,6 +9,7 @@ use App\Actualite;
 use App\Gallerie;
 use App\Inscription;
 use App\Contact;
+use App\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Resources\Views\acceuil;
@@ -198,6 +199,23 @@ class afficheController extends Controller
                                    
                             
                             }      
+
+                            public function getAdmins()
+                            {
+                               
+                              
+                                ##################### paginate result ####################
+                                
+                                $admin = Admin::select(
+                                    'id','name','email','created_at'
+                                    
+                                )->get();
+                        
+                                return 
+                                       view('viewAdmin.administrateur',compact('admin') );
+                                       
+                                
+                                }      
            
    
 }

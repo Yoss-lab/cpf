@@ -30,6 +30,6 @@ class crud extends Controller
             'details_en' => $request->details_en,
         ]);
 
-        return redirect()->back()->with(['success' => 'تم اضافه العرض بنجاح ']);
+        return redirect()->back()->with(['success' => 'Envoyé avec succée  ']);
     }
 }

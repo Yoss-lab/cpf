@@ -10,7 +10,7 @@ use PhpParser\Node\Expr\AssignOp\Mod;
 class Admin extends Authenticatable
 {
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','prenom','genre','type','dat_naiss','cin','tel', 'email','user_name', 'password',
     ];
 
     protected $hidden = [

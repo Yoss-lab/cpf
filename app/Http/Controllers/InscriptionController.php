@@ -24,7 +24,7 @@ class InscriptionController extends Controller
             
         ]);
 
-        return "تمت الاضافة بنجاح";
+        return "Envoyé avec succée ";
         /* return redirect()->back()->with(['success' => 'تم اضافه العرض بنجاح ']); */
     }
 }

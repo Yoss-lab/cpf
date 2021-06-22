@@ -67,6 +67,16 @@
                                     <a href="{{url('/messages')}}"><i class="ik ik-bar-chart-2"></i><span>Message</span></a>
                                 </div> 
 
+                                <div class="nav-lavel">Direction</div>
+                                <div class="nav-item active">
+                                    <a href="{{url('/administrateurs')}}"><i class="ik ik-bar-chart-2"></i><span>Administration</span></a>
+                                </div> 
+
+                                <div class="nav-item active">
+                                    <a href="{{url('/addAdmin')}}"><i class="ik ik-bar-chart-2"></i><span>Ajouter admin</span></a>
+                                </div> 
+                                
+
 
                                 <div class="nav-lavel">Support</div>
                                 <div class="nav-item">

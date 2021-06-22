@@ -81,6 +81,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/gallerie','afficheController@getAdminGallerie');
         Route::get('/inscriptions','afficheController@getAdminInscri');
         Route::get('/messages', 'afficheController@getAdminMessages');
+        Route::get('/administrateurs', 'afficheController@getAdmins');
 
         Route::get('/formations', function () {return view('viewAdmin.formations');});
         Route::get('/editFormation/{id}', function () {return view('viewAdmin.editFormation');});
@@ -110,7 +111,11 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::post('/addGallerie','CrudGallerie@store');
         Route::get('/deleteGallerie/{id}','CrudGallerie@destroy');
 
-        
+        Route::get('/addAdmin','CrudAdmin@create');
+        Route::post('/addAdmin','CrudAdmin@store');
+        Route::get('/deleteAdmin/{id}','CrudAdmin@destroy');
+        Route::get('/editAdmin/{id}','CrudAdmin@edit')->name('editAdmin');
+        Route::post('/updateActualite{id}','CrudAdmin@update');
 
     });
 
