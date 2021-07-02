@@ -67,7 +67,7 @@
                                                         <td>{{$act -> created_at}}</td>
                                                         <td>{{$act -> updated_at}}</td>
                                                         <td>
-                                                            <a href="{{route('editAct', $act -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a>
+                                                            <a href="{{url('editActualite'.$act -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a>
                                                             <a href="{{url('deleteActualite', $act -> id)}}"><i class="ik ik-trash-2 f-16 text-red"></i></a>
                                                         </td>
                                                     </tr>

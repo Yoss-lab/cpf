@@ -66,7 +66,7 @@
                                                         <td>{{ $admin-> id}}</td>
                                                         <td>{{ $admin-> created_at}}</td>
                                                         
-                                                        <td><a href="{{url('editAdmin', $admin -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a><a href="{{url('deleteAdmin', $admin -> id)}}"><i class="ik ik-trash-2 f-16 text-red"></i></a></td>
+                                                        <td><a href="{{url('editAdmin'. $admin -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a><a href="{{url('deleteAdmin', $admin -> id)}}"><i class="ik ik-trash-2 f-16 text-red"></i></a></td>
                                                     </tr>
                                                  @endforeach   
                                                 </tbody>

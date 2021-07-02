@@ -8,6 +8,6 @@ class Formation extends Model
 {
     
     protected $fillable = [
-        'id','nomFormation', 'type','prix', 'descFormation' ,'image', 
+        'id','nomFormation', 'type','categorie','prix', 'descFormation' ,'module1','module2','module3','image', 
     ];
 }

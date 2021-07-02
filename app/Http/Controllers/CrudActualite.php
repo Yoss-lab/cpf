@@ -41,7 +41,7 @@ class CrudActualite extends Controller
         Actualite::create([
             'image' => $image,
             'titre' => $request->titre,
-            'descAct' =>   $request->descAct, 
+            'descAct' =>   $request->description, 
             'created_at' =>  $request->created_at,
             
         ]);

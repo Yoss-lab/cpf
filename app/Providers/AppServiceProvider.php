@@ -33,12 +33,18 @@ class AppServiceProvider extends ServiceProvider
         ##################### paginate result ####################
         $formations = Formation::select(
             'id',
+            
             'nomFormation',
             'image',
             'type',
+            'categorie',
             'prix',
             
-            'descFormation'
+            'descFormation',
+            'module1',
+            'module2',
+            'module3'
+
             
         )->get();
 

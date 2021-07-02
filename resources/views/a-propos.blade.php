@@ -29,7 +29,6 @@
     @include('includes.a-proposCPF')
 
 <!-- Mot directeur -->
-@include('includes.motDirecteur')
 
 <!-- about centre CPF -->
 @include('includes.about')

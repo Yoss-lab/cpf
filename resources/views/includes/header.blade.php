@@ -21,7 +21,7 @@
                  
                  @if ($formation -> type == 1) 
               
-                 <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
+                 <li><a href="{{url('formation_details'.$formation->id)}}">{{$formation -> nomFormation}}</a></li>
                  @endif
                  @endforeach
                   
@@ -34,7 +34,7 @@
                  
                  @if ($formation -> type == 2) 
               
-                 <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
+                 <li><a href="{{url('formation_details'.$formation->id)}}">{{$formation -> nomFormation}}</a></li>
                  @endif
                  @endforeach
                   
@@ -54,7 +54,7 @@
                  
                   @if ($formation -> type == 3) 
                
-                  <li><a href="{{url('showFormation', $formation -> id)}}">{{$formation -> nomFormation}}</a></li>
+                  <li><a href="{{url('formation_details'.$formation->id)}}">{{$formation -> nomFormation}}</a></li>
                   @endif
                   @endforeach
                   
@@ -65,8 +65,13 @@
               
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#">E-learning</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('/contact') }}">Contact</a></li>
+
+          <li class="nav-link scrollto"><a href="{{ url('/e-learning') }}"><span>E-learning</span></i></a>
+           
+         
+          </li>
+<!--           <li><a class="nav-link scrollto" href="{{ url('/e-learning') }}">E-learning</a></li>
+ -->          <li><a class="nav-link scrollto" href="{{ url('/contact') }}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
 

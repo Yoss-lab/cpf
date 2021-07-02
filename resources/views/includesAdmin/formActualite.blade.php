@@ -10,10 +10,16 @@
                     <div class="form-group">
                       <label for="exampleInputName1">Titre</label>
                       <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="titre">
+                      @error('titre')
+                      <small class="form-text text-danger">{{$message}}</small>
+                      @enderror
                     </div>
                     <div class="form-group">
                        <label for="exampleTextarea1">Description</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4" name="descAct"></textarea>
+                        <textarea class="form-control" id="exampleTextarea1" rows="4" name="description"></textarea>
+                        @error('description')
+                      <small class="form-text text-danger">{{$message}}</small>
+                      @enderror
                     </div>
 
                     <div class="form-group">
@@ -25,6 +31,9 @@
                               <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
                             </span>
                         </div>
+                        @error('image')
+                      <small class="form-text text-danger">{{$message}}</small>
+                      @enderror
                       </div>
 
                    

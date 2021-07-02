@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Actualite extends Model
 {
     protected $fillable = [
-        'id','image', 'titre', 'descAct' , 'created_at','updated_at'
+        'id','image', 'titre', 'descAct' , 
     ];
 }

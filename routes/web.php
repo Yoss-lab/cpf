@@ -42,12 +42,22 @@ Route::get('/contact', function () {
 Route::get('/a-propos', function () {
     return view('a-propos');
 });
+
+Route::get('/e-learning', function () {
+    return view('e-learning');
+});
+
+Route::get('/support_de_cours', function () {
+    return view('supportCours');
+});
+
 Route::get('/a-propos','afficheController@getAllFormations' );
 
 
 
- Route::get('/showFormation/{formation}', function () {
-    return view('test');
+ 
+Route::get('/showFormation/informatiqu-bureautique', function () {
+    return view('formations.bureautique');
 }); 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -58,13 +68,17 @@ Route::group(['middleware' => 'auth'], function () {
         return view('formations.inscription');
     });
     Route::post('/inscri','InscriptionController@store');
+
+    Route::get('/support_cours', 'afficheController@getCoursEtudiant');
+    Route::get('/seanceLive', 'afficheController@getLives');
+    Route::get('/detailsLive{id}','CrudSeance@show');
+    
+    Route::get('/voirCour/{id}','CRUDCours@showEtudiant');
+    Route::get('/telechargeCours/{pdf}','CRUDCours@downloadEtudiant');
+
 });
 
-Route::get('showFormation/{formation}','CRUDController@show');
-
-Route::get('/formation',function(){
-    return view('formations.bureautique');
-});
+Route::get('/formation_details{formation}','CRUDController@show');
 
 
 
@@ -82,14 +96,15 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/inscriptions','afficheController@getAdminInscri');
         Route::get('/messages', 'afficheController@getAdminMessages');
         Route::get('/administrateurs', 'afficheController@getAdmins');
+        Route::get('/cours', 'afficheController@getCours');
 
         Route::get('/formations', function () {return view('viewAdmin.formations');});
-        Route::get('/editFormation/{id}', function () {return view('viewAdmin.editFormation');});
+        Route::get('/editFormation{id}', function () {return view('viewAdmin.editFormation');});
 
         Route::get('/ajoutFormation','CRUDController@create');
         Route::post('/ajoutFormation','CRUDController@store');
         Route::get('/deleteFormation/{id}','CRUDController@destroy');
-        Route::get('/editFormation/{id}','CRUDController@edit');
+        Route::get('/editFormation{id}','CRUDController@edit');
         Route::post('/updateFormation{id}','CRUDController@update');
 
 
@@ -104,7 +119,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/addAct','CrudActualite@create');
         Route::post('/addAct','CrudActualite@store');
         Route::get('/deleteActualite/{id}','CrudActualite@destroy');
-        Route::get('/editActualite/{id}','CrudActualite@edit')->name('editAct');
+        Route::get('/editActualite{id}','CrudActualite@edit');
         Route::post('/updateActualite{id}','CrudActualite@update');
 
         Route::get('/addGallerie','CrudGallerie@create');
@@ -114,9 +129,17 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('/addAdmin','CrudAdmin@create');
         Route::post('/addAdmin','CrudAdmin@store');
         Route::get('/deleteAdmin/{id}','CrudAdmin@destroy');
-        Route::get('/editAdmin/{id}','CrudAdmin@edit')->name('editAdmin');
+        Route::get('/editAdmin{id}','CrudAdmin@edit')->name('editAdmin');
         Route::post('/updateActualite{id}','CrudAdmin@update');
 
+
+        Route::get('/ajoutCours','CRUDCours@create');
+        Route::post('/ajoutCours','CRUDCours@store');
+        Route::get('/showcours/{id}','CRUDCours@show');
+        Route::get('/cours/download/{pdf}','CRUDCours@download');
+
+        Route::get('/ajoutSeance','CrudSeance@create');
+        Route::post('/ajoutSeance','CrudSeance@store');
     });
 
 

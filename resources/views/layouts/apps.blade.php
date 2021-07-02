@@ -27,6 +27,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  
+
   <!-- =======================================================
   * Template Name: BizLand - v3.1.0
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -44,7 +46,7 @@
 
     <!-- header -->
      @include('includes.header')
-    <main id="main">
+    <main id="main" data-aos="fade-up">
         
       @yield('content')
 

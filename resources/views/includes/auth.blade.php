@@ -13,7 +13,7 @@
                             @if (Route::has('register'))
                                <div>
                                <ul>
-                                    <a  href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                                    <a  href="{{ route('register') }}">{{ __('SignUp') }}</a>
                                     </ul>
                                 </div>
                             @endif

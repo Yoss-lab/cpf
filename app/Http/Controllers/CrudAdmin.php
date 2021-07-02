@@ -41,7 +41,7 @@ class CrudAdmin extends Controller
         //insert
         Admin::create([
             //'image' => $image,
-            'name' => $request->name,
+            'name' => $request->nom,
             'prenom' => $request->prenom,
             'genre' => $request->genre,
             //'type' =>   $request->type, 

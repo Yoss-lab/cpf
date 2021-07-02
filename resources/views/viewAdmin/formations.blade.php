@@ -81,7 +81,7 @@
                                                         @endif
 
                                                         <td>
-                                                            <a href="{{url('editFormation', $formation -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a>
+                                                            <a href="{{url('editFormation'.$formation -> id)}}"><i class="ik ik-edit f-16 mr-15 text-green"></i></a>
                                                             <a href="{{url('deleteFormation', $formation -> id)}}"><i class="ik ik-trash-2 f-16 text-red"></i></a>
                                                         </td>
                                                     </tr>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Traits\OfferTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\ValidationRequest;
 use App\Formation;
 
 class CRUDcontroller extends Controller
@@ -42,7 +44,7 @@ class CRUDcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidationRequest $request)
     {
        
          $image = $this->saveImage($request->image, 'assets/img/formation'); 
@@ -50,10 +52,14 @@ class CRUDcontroller extends Controller
         //insert
         Formation::create([
             'image' => $image,
-            'nomFormation' => $request->nomFormation,
+            'nomFormation' => $request->nom,
             'type' =>   $request->type, 
+            'categorie' =>   $request->categorie, 
             'prix' =>   $request->prix, 
-            'descFormation' =>  $request->descFormation,
+            'descFormation' =>  $request->descrption,
+            'module1' =>   $request->module1,  
+            'module2' =>   $request->module2, 
+            'module3' =>   $request->module3, 
             
         ]);
 
@@ -74,9 +80,7 @@ class CRUDcontroller extends Controller
         return view('detailsFormation',compact('formation'));
 
 
-       /*  return view('detailsFormation', [
-            'formation' => Formation::findOrFail($id)
-        ]); */
+      
     }
 
     /**

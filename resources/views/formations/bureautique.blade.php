@@ -5,76 +5,65 @@
 
   <main id="main" data-aos="fade-up">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
-    <div class="container">
+     <!-- ======= Breadcrumbs Section ======= -->
+     <section class="breadcrumbs">
+      <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-        <h2><a href="{{url('/inscription')}}" type="submit">Inscrivez-vous </a></h2>          
-        <ol>
-            <li><a href="{{ url('/') }}">Acceuil</a></li>
-            <li>Informatique Bureautique</li>
-        </ol>
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="/">Acceuil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>Portfolio Details</li>
+          </ol>
         </div>
 
-    </div>
-    </section><!-- End Breadcrumbs -->
+      </div>
+    </section><!-- Breadcrumbs Section -->
 
-    <section class="inner-page">
-    <div class="container">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
 
-    <!-- description formation  -->
-               <!-- ======= About Section ======= -->
-            <section id="about" class="about section-bg">
-                <div class="container" data-aos="fade-up">
-                
-                    <div class="section-title">
-                    <!-- <h2>About</h2> -->
+        <div class="row gy-4">
 
-                    <h3>Description De formation   <span>Informatique bureautique</span></h3>
-            <!--           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-            -->        </div>
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
 
-                    <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <img src="" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <!--             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            -->            <p class="fst-italic">
-                            khdgdequrfybfhbgf dsbfgufsgbu qveufduqefvueq cvuidgsfueqv  uzqgruidqvf gquidgsufg vsifv  shqufiguidqgf.
-                            hdhesfugdu fbdugf sjbhfdu sb.
-                        </p>
-                            <div class="section-title">
-                                <h2>Emplois visés :</h2> 
-                            </div>
-                        <ul>
-                        <li>
-                            <i class="bx bx-store-alt"></i>
-                            <div>
-                            <!-- <h5>Animateur de jardin d’enfantst</h5> -->
-                            <p>*********************************************</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="bx bx-images"></i>
-                            <p>**********************************************</p>
-                            <div>
-                            <!-- <h5>Magnam soluta odio exercitationem reprehenderi</h5> -->
-                            
-                            </div>
-                        </li>
-                        </ul>
-                        <!-- <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum
-                        </p> -->
-                    </div>
-                    </div>
-
+                <div class="swiper-slide">
+                  <img src="assets/img/formation/1621502004.jpg" alt="">
                 </div>
-                </section><!-- End About Section -->
+
+               
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Informatique bureautique</h3>
+              <ul>
+                <li><strong>Categorie</strong>: Informatique</li>
+                <li><strong>Fomation</strong>: Informatique bureautique</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li> <a href="{{url('/inscription')}}"><strong>Inscrivez-vous</strong></a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2></h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
 
     <!-- Module formation BTS -->
   

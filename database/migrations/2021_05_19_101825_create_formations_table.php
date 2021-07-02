@@ -18,9 +18,14 @@ class CreateFormationsTable extends Migration
 
             $table->id();
             $table->string('nomFormation');
+            
             $table->string('type');
+            $table->string('categorie')->nullable();
             $table->string('prix');
             $table->string('descFormation');
+            $table->string('module1')->nullable();
+            $table->string('module2')->nullable();
+            $table->string('module3')->nullable();
             $table->string('image');
             $table->timestamps();
         });

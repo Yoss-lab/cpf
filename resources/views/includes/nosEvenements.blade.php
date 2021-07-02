@@ -31,8 +31,8 @@
                   <div class="post-content">
                     <div class="post-meta">
                       <a href="#">{{$actualite -> created_at}}</a>
-                      <span class="mx-1">/</span>
-                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                      <!-- <span class="mx-1">/</span> -->
+                      <a href="#"></a> <a href="#"></a>
                     </div>
                     <h3 class="post-heading"><a href="news-single.html">{{$actualite -> titre}}</a></h3>
                   </div>
